@@ -16,10 +16,11 @@ def prepare_inputs(inputs):
     minval = min(min(input_array))
     inputs_minus_min = input_array - minval
 
-    # TODO: find the maximum value in inputs_minus_min and divide
-    #       all of the values in inputs_minus_min by the maximum value.
-    #       Store the results in inputs_div_max.
-    inputs_div_max = None
+    # find the maximum value in inputs_minus_min and divide
+    # all of the values in inputs_minus_min by the maximum value.
+    # Store the results in inputs_div_max.
+    maxval = max(max(inputs_minus_min)) 
+    inputs_div_max = inputs_minus_min / maxval 
 
     # return the three arrays we've created
     return input_array, inputs_minus_min, inputs_div_max
