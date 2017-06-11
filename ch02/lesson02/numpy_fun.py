@@ -27,18 +27,22 @@ def prepare_inputs(inputs):
     
 
 def multiply_inputs(m1, m2):
-    # TODO: Check the shapes of the matrices m1 and m2. 
-    #       m1 and m2 will be ndarray objects.
+    # Check the shapes of the matrices m1 and m2. 
+    # m1 and m2 will be ndarray objects.
     #
-    #       Return False if the shapes cannot be used for matrix
-    #       multiplication. You may not use a transpose
-    pass
+    # Return False if the shapes cannot be used for matrix
+    # multiplication. You may not use a transpose
+    print("m1: {}\n{}\nm2: {}\n{}".format(m1.shape, m1, m2.shape, m2)) 
+    if (m1.shape[1] != m2.shape[0]) and (m1.shape[0] != m2.shape[1]):
+        return False
 
-
-    # TODO: If you have not returned False, then calculate the matrix product
-    #       of m1 and m2 and return it. Do not use a transpose,
-    #       but you swap their order if necessary
-    pass
+    # If you have not returned False, then calculate the matrix product
+    # of m1 and m2 and return it. Do not use a transpose,
+    # but you swap their order if necessary
+    if (m1.shape[1] != m2.shape[0]):
+        return np.matmul(m2, m1)
+    else:
+        return np.matmul(m1, m2) 
     
 
 def find_mean(values):
