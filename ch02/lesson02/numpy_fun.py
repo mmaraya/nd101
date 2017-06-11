@@ -1,18 +1,20 @@
-#!/bin/env python
+#!/usr/bin/env python
 
 # Use the numpy library
 import numpy as np
 
 
 def prepare_inputs(inputs):
-    # TODO: create a 2-dimensional ndarray from the given 1-dimensional list;
-    #       assign it to input_array
-    input_array = None
+    # create a 2-dimensional ndarray from the given 1-dimensional list;
+    # assign it to input_array
+    input_array = np.array(inputs)
+    input_array = input_array[None, :]
     
-    # TODO: find the minimum value in input_array and subtract that
-    #       value from all the elements of input_array. Store the
-    #       result in inputs_minus_min
-    inputs_minus_min = None 
+    # find the minimum value in input_array and subtract that
+    # value from all the elements of input_array. Store the
+    # result in inputs_minus_min
+    minval = min(min(input_array))
+    inputs_minus_min = input_array - minval
 
     # TODO: find the maximum value in inputs_minus_min and divide
     #       all of the values in inputs_minus_min by the maximum value.
