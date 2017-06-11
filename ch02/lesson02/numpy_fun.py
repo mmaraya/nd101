@@ -32,7 +32,7 @@ def multiply_inputs(m1, m2):
     #
     # Return False if the shapes cannot be used for matrix
     # multiplication. You may not use a transpose
-    print("m1: {}\n{}\nm2: {}\n{}".format(m1.shape, m1, m2.shape, m2)) 
+    #print("m1: {}\n{}\nm2: {}\n{}".format(m1.shape, m1, m2.shape, m2)) 
     if (m1.shape[1] != m2.shape[0]) and (m1.shape[0] != m2.shape[1]):
         return False
 
@@ -46,8 +46,9 @@ def multiply_inputs(m1, m2):
     
 
 def find_mean(values):
-    # TODO: Return the average of the values in the given Python list
-    pass
+    # Return the average of the values in the given Python list
+    #print("values: {}".format(values))
+    return np.mean(np.array(values))
 
 
 input_array, inputs_minus_min, inputs_div_max = prepare_inputs([-1,2,7])
