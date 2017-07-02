@@ -8,7 +8,9 @@ def run():
     x = tf.placeholder(tf.int32)
 
     with tf.Session() as sess:
-        # TODO: Feed the x tensor 123
-        output = sess.run(x)
+        # DONE: Feed the x tensor 123
+        output = sess.run(x, feed_dict={x: 12})
 
     return output
+
+run()
